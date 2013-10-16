@@ -1,6 +1,14 @@
+PATH
+  remote: .
+  specs:
+    netscaler (0.0.1)
+
 GEM
   remote: http://rubygems.org/
   specs:
+    addressable (2.3.5)
+    crack (0.4.1)
+      safe_yaml (~> 0.9.0)
     diff-lcs (1.1.3)
     git (1.2.5)
     jeweler (1.8.4)
@@ -23,6 +31,11 @@ GEM
     rspec-expectations (2.8.0)
       diff-lcs (~> 1.1.2)
     rspec-mocks (2.8.0)
+    safe_yaml (0.9.7)
+    vcr (2.5.0)
+    webmock (1.11.0)
+      addressable (>= 2.2.7)
+      crack (>= 0.3.2)
 
 PLATFORMS
   ruby
@@ -31,6 +44,10 @@ DEPENDENCIES
   bundler
   jeweler
   json
+  netscaler!
+  rake
   rdoc (~> 3.12)
   rest-client
   rspec (~> 2.8.0)
+  vcr
+  webmock (= 1.11.0)

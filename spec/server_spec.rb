@@ -11,13 +11,13 @@ describe Netscaler::Server do
 
       expect {
         connection.servers.add_server({'ipaddress'=>'123.123.123.123'})
-      }.should raise_error(ArgumentError, /name/)
+      }.to raise_error(ArgumentError, /name/)
     end
 
     it 'a ipaddress is required' do
       expect {
         connection.servers.add_server({'name'=>'hostname'})
-      }.should raise_error(ArgumentError, /ipaddress/)
+      }.to raise_error(ArgumentError, /ipaddress/)
     end
   end
 end

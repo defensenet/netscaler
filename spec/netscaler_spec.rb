@@ -6,18 +6,18 @@ describe Netscaler do
   context 'creating a new instance' do
     it 'a hostname is required' do
       expect {
-        netscaler = Netscaler::Connection.new 'username'=> 'foo', 'password' => 'bar'
-      }.should raise_error(ArgumentError, /hostname/)
+        Netscaler::Connection.new 'username'=> 'foo', 'password' => 'bar'
+      }.to raise_error(ArgumentError, /hostname/)
     end
     it 'a username is required' do
       expect {
-        netscaler = Netscaler::Connection.new 'hostname'=> 'foo', 'password' => 'bar'
-      }.should raise_error(ArgumentError, /username/)
+        Netscaler::Connection.new 'hostname'=> 'foo', 'password' => 'bar'
+      }.to raise_error(ArgumentError, /username/)
     end
     it 'a password is required' do
       expect {
-        netscaler = Netscaler::Connection.new 'username'=> 'foo', 'hostname' => 'bar'
-      }.should raise_error(ArgumentError, /password/)
+        Netscaler::Connection.new 'username'=> 'foo', 'hostname' => 'bar'
+      }.to raise_error(ArgumentError, /password/)
     end
   end
 

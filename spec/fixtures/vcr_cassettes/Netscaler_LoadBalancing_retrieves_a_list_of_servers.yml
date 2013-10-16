@@ -1,0 +1,124 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://nc1.lab5.defense.net/nitro/v1/config/login
+    body:
+      encoding: UTF-8
+      string: '{"login":{"username":"api","password":"3ZbN048a"}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '50'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Wed, 16 Oct 2013 09:03:55 GMT
+      Server:
+      - Apache
+      Set-Cookie:
+      - SESSID=9847e7bc2eead044f67cbd806f8706b1; path=/; HttpOnly
+      - SESSID=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/
+      - sessionid=%23%23DAF48DCC902D3EDF28D53A8859C22226B7E3CC98D307968961367EE305A3;
+        path=/nitro/v1
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '136'
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: '{ "errorcode": 0, "message": "Done", "severity": "NONE", "sessionid":
+        "##DAF48DCC902D3EDF28D53A8859C22226B7E3CC98D307968961367EE305A3" }'
+    http_version: 
+  recorded_at: Wed, 16 Oct 2013 16:06:26 GMT
+- request:
+    method: get
+    uri: http://nc1.lab5.defense.net/nitro/v1/config/lbvserver/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Cookie:
+      - NITRO_AUTH_TOKEN=##DAF48DCC902D3EDF28D53A8859C22226B7E3CC98D307968961367EE305A3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 16 Oct 2013 09:03:55 GMT
+      Server:
+      - Apache
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Content-Encoding:
+      - gzip
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '1189'
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA+ya72/jJhjH/xUrL6dL5d92/C53zW2VqqRqspumaS8wJjEq
+        Nj7A7qrT/e8DbMe+tGqjdlq2FFVVy5cHDM8PPsLJN2uCGKMM0gxNEsv+YE0K
+        xDnYqdbkkpZoIiWOGsSweFDacrVcKI2kDUdM6lL8w/pmTUpQ6EEZ2qKSoxKJ
+        aUWZAGRKQBpMOSdqGJZdTHRDcaUs1KDV58+6t2r8ULWdyLtw/dlFcOG6YdtT
+        ASEQK1WvfaF/Wr0A/E6JP+lVYS5QWVGCoV5t2e2g0xmm/T4c2+nHVxUudwfz
+        dgvzfU82GChbhzitN1iDIRIPldbW62ul9s355eXtYr1WEqwZF0Bo+dcbpaDt
+        FkGBG3Sgq2bNZdvRnmWMIcBp2UUEApgPj1vcflncqkGgFjkqBYZAYG3be1F1
+        lL7c3yBlDzI8GN4jvMu1w9tNjvyhBUiEwAWitbZxYi1yWiCR02wcfU4rxLh2
+        KmxT5Wo9/3i9uHzUOZrPVZ05AkTkImeI55Rk+0eTdHjK9WK+3nxaLZeLT5ur
+        1VJvAAhAt1uOhtW3M7WxtHsbgspdK2pJZmGfH24gk2n4Vb2sJnu/avNC/Xel
+        QzLeQmfSb37YkjsYPvMYHT+Qkm4SPfvXUXA4HDWY4FUJxkXBZUHKABP559DT
+        MndHhpCW5RZgQtuq/MGSoQwzmXsqrxm6l1F/FLaM3pc6L7ek5tqFi+XQibna
+        gcyYArAHWirjwwl2wt2lh6JcFJflKGODMqJWqAx+vl59nF8/2b1LibL4faFL
+        aJ8nDSB1f0LhsqF3qrEFhCMpNCoEugRU/QgqlK6LlO+rFrR1dyjrDcNcFbgK
+        K0c6FpsaWWtUWa5vOUHihInjWK7teE+PkN5oJ/Ri2/aCKHpq5qKb2m4zCN7J
+        oMrcIoCLkWVbdlHsh34Y6STHgg/1ituT7UexC9bY6UoraiIfQ7A8IviQeMTt
+        Y9AlTfHAv5KKUUEhJYMju3pQnXJlTHpPdo2KT/e0pzgEFUgxwQKjYVXyUN0S
+        ek/o7iCRMN9xko6Ch2FRNVyeeLySuaA9cDNfr6++6FpreMNSLB3cQFw9SYaR
+        RXdoqxzhd5IY+xJuydWxQAyHToFLeVhSDuW5IUOUygFDH/jrmT5YSGIyJIBM
+        RgIelUKWtpscROv7h+cpmYEG5bTm6A2ojN4RKr1DVHoGlQaVBpX/Mip/Q5m1
+        gsJyQsuOE99L3PA4VDozx7Pt8G2odN1Z6BpOvsDJ6Jw4qW+TuRDVtC/UqaBa
+        4K+k5ikvmLH9EjR/2WxuDDUNNQ01z4ya6oJp+ZbrJm6Q2NFR1Ixiz/MCO3oT
+        Nb0gtiM3tn0Dzvd5wfxH6XnKO6ehp6Gnoaehp6Hnf5GeZ3XtBBWeOq9EZHxC
+        RJrXsgaRBpHvDpHqE0z9WjawnDDx7MTzjnwtGwd+6D1ldzwig1lou05sAPkC
+        IONzA6T7SkDODCANIA0gDSBPBkgnsY/8io8GZPi2r/gEsyDyzQ3yRUDOzgmQ
+        z3xwOe3viP+vu+XJX7/6Bp0GnQadJ0VnYCf+8egMYv+N6Iy9meSvQedZ3S2t
+        P63vfwMAAP//AwCzqRljjDIAAA==
+    http_version: 
+  recorded_at: Wed, 16 Oct 2013 16:06:26 GMT
+recorded_with: VCR 2.5.0

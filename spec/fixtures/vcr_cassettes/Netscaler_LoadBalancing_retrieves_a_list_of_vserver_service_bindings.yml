@@ -1,0 +1,104 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://nc1.lab5.defense.net/nitro/v1/config/login
+    body:
+      encoding: UTF-8
+      string: '{"login":{"username":"api","password":"3ZbN048a"}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '50'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Wed, 16 Oct 2013 09:39:57 GMT
+      Server:
+      - Apache
+      Set-Cookie:
+      - SESSID=74dc6fabafbd65c5c575618a2a2a7ab5; path=/; HttpOnly
+      - SESSID=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/
+      - sessionid=%23%2327D5EB335E0E8A2E465DB5BD7A134ECB8B24DE80CC782BB94D3352B5F990;
+        path=/nitro/v1
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '136'
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: '{ "errorcode": 0, "message": "Done", "severity": "NONE", "sessionid":
+        "##27D5EB335E0E8A2E465DB5BD7A134ECB8B24DE80CC782BB94D3352B5F990" }'
+    http_version: 
+  recorded_at: Wed, 16 Oct 2013 16:42:27 GMT
+- request:
+    method: get
+    uri: http://nc1.lab5.defense.net/nitro/v1/config/lbvserver_service_binding/defensenet-portal-davehouse-ssl
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Cookie:
+      - NITRO_AUTH_TOKEN=##27D5EB335E0E8A2E465DB5BD7A134ECB8B24DE80CC782BB94D3352B5F990
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 16 Oct 2013 09:39:57 GMT
+      Server:
+      - Apache
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Content-Encoding:
+      - gzip
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '283'
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA2SQTU/EIBCG/wrhLE273a0fZ008rR7WkzEbWoaW2BaEKZtm
+        s//dDltjoifCw/sxzJlx8N76xirgDyy/YXyAEGRLN/5oR+ALChDBG5yJ7V/2
+        T8T6OgbwCz/SYRo41mZUZmwX0Ts7Mz7KIYUo0DAGGAGFsx5lL5SM0NkpgAih
+        v+anhB/HP1mH6JIOJYLuJXXwXVndl9V2V9CLcXFbEaUL+dfPrMk4u5T8fDi8
+        kqKZfMoi9pbICUzbkYunPDUvw5jml+bJZu2nAePWglS2bsEoAqBbbVFbPYkv
+        F6Z6EFCf9DIcaoE4XPXR06ZCbIwjz22VFXmZFZtNVpZ/FGvRXc4u7INdvgEA
+        AP//AwDckACargEAAA==
+    http_version: 
+  recorded_at: Wed, 16 Oct 2013 16:42:28 GMT
+recorded_with: VCR 2.5.0

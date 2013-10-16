@@ -10,7 +10,11 @@ module Netscaler
       return @netscaler.adapter.get("config/lbvserver/#{args[:name]}", args)
     end
 
-    def get_lbvservers()
+    def get_lbvserver_service_binding(payload)
+      return @netscaler.adapter.get("config/lbvserver_service_binding/#{payload}")
+    end
+
+    def get_lbvservers
       return @netscaler.adapter.get("config/lbvserver/")
     end
 
