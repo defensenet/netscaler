@@ -34,7 +34,7 @@ module Netscaler
       @servers = Server.new self
     end
 
-    def login()
+    def login
       payload = {
         'username' => @credentials[:username],
         'password' => @credentials[:password]

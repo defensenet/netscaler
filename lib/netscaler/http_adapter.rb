@@ -1,9 +1,9 @@
-require 'netscaler/adapter'
 require 'rest-client'
 require 'json'
+require 'hashr'
 
 module Netscaler
-  class HttpAdapter < Adapter
+  class HttpAdapter
 
     def initialize(args)
       @site = RestClient::Resource.new(args[:hostname])
@@ -33,13 +33,6 @@ module Netscaler
     def get(part, args={})
       url = get_uri(part)
       headers = {}
-      unless @credentials.count == 0
-        headers = {
-            'X-NITRO-USER' => @credentials[:username],
-            'X-NITRO-PASS' => @credentials[:password],
-            'Content-Type' => 'application/vnd.com.citrix.netscaler.lbvserver+json'
-        }
-      end
       options = prepare_options(args.merge(headers))
 
       @site[url].get(options) do |response, request, result|
@@ -68,10 +61,11 @@ module Netscaler
       end
       options[:accept] = :json
       options[:params] = args[:params] if args.has_key?(:params)
-      options['X-NITRO-USER'] = @credentials[:username]
-      options['X-NITRO-PASS'] = @credentials[:password]
-      options['Content-Type'] = 'application/vnd.com.citrix.netscaler.lbvserver+json'
-
+      if @credentials
+        options['X-NITRO-USER'] = @credentials[:username]
+        options['X-NITRO-PASS'] = @credentials[:password]
+        options['Content-Type'] = 'application/vnd.com.citrix.netscaler.lbvserver+json'
+      end
       return options
     end
 
@@ -87,7 +81,7 @@ module Netscaler
       if result.header['content-type'] =~ /application\/json/
         payload = JSON.parse(response)
         check_error(payload)
-        return payload
+        return Hashr.new payload
       else
         raise Exception, 'Shit is broke'
       end

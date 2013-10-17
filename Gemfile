@@ -17,3 +17,4 @@ end
 
 gem 'rest-client'
 gem 'json'
+gem 'hashr'

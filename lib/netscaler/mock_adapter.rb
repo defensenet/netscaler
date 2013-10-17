@@ -1,7 +1,7 @@
-require 'netscaler/adapter'
+require 'netscaler/http_adapter'
 #require 'json'
 module Netscaler
-  class MockAdapter < Adapter
+  class MockAdapter < HttpAdapter
 
     class Result
 
